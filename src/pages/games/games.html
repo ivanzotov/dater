@@ -18,9 +18,10 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="openGame(item)" icon-start>
+    <button ion-item *ngFor="let game of games" (click)="openGame(game)" icon-start>
       <ion-icon name="game-controller-b" [ngStyle]="{'color': '#ffb338'}" item-start></ion-icon>
-      {{ item }}
+      {{ game.name }}
+      <ion-note item-end>Кол. игроков – {{ game.count }}</ion-note>
     </button>
   </ion-list>
 </ion-content>

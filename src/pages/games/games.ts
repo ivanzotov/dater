@@ -8,13 +8,19 @@ import { GamePage } from '../../pages/game/game';
   templateUrl: 'games.html'
 })
 export class GamesPage {
-  items = ['hello', 'world'];
+  games = [{
+    name: 'Первая игра',
+    count: 2,
+  }, {
+    name: 'Вторая игра',
+    count: 3,
+  }];
 
   constructor(public modalCtrl: ModalController, public nav: NavController) {
   }
 
-  openGame(item: string) {
-    this.nav.push(GamePage, { item: item });
+  openGame(game: Object) {
+    this.nav.push(GamePage, { game: game });
   }
 
   createGame() {

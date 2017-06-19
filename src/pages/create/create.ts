@@ -6,7 +6,18 @@ import { ViewController } from 'ionic-angular';
   templateUrl: 'create.html'
 })
 export class CreatePage {
+  name = 'Новая игра'
+  usersCount = 2
+
   constructor(public viewCtrl: ViewController) {
+  }
+
+  createGame() {
+    console.log(`Создание игры "${this.name}", ${this.usersCount}`)
+  }
+
+  nameIsEmpty() {
+    return this.name.trim() === ''
   }
 
   dismiss() {
