@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="search"></ion-icon>
+        Найти
+      </button>
+    </ion-buttons>
+    <ion-title>Игры</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="createGame()">
+        Создать
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="openGame(item)" icon-start>
+      <ion-icon name="game-controller-b" [ngStyle]="{'color': '#ffb338'}" item-start></ion-icon>
+      {{ item }}
+    </button>
+  </ion-list>
+</ion-content>

@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-game',
+  templateUrl: 'game.html'
 })
-export class ContactPage {
-
+export class GamePage {
   constructor(public navCtrl: NavController) {
-
   }
 
+  goBack() {
+    this.navCtrl.pop();
+  }
 }

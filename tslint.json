@@ -1,11 +1,73 @@
 {
-  "rules": {
-    "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
-    ]
-  },
   "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ]
+    "node_modules/codelyzer"
+  ],
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "dater",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "dater",
+      "kebab-case"
+    ],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-attribute-parameter-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "no-forward-ref": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "no-misused-new": true,
+    "curly": true,
+    "import-spacing": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-trailing-whitespace": true,
+    "no-consecutive-blank-lines": [
+      true,
+      2
+    ],
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "pipe-naming": [
+      true,
+      "camelCase",
+      "dater"
+    ],
+    "class-name": true,
+    "component-class-suffix": false,
+    "directive-class-suffix": true,
+    "templates-use-public": true,
+    "no-access-missing-member": true,
+    "invoke-injectable": true,
+    "max-line-length": [
+      true,
+      120
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-operator",
+      "check-typecast",
+      "check-module",
+      "check-separator",
+      "check-type"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ]
+  }
 }
